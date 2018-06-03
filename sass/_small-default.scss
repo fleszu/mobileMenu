@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $defaultFont;
+	font-size: 16px;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: "myNavigation" "myHeader" "myContent" "myFooter";
+}
+
+header {
+	grid-area: myHeader;
+	margin-top: 44px;
+	h1 {
+		display: none;
+	}
+	img {
+		padding: 1rem 0 .5rem 2%;
+		display: block;
+	}
+
+}
+
+div.smallNavBar {
+	background-color: $menuColor;
+}
+
+.hamburger {
+	display: block;
+	width: 7rem;
+	height: 2.75rem;
+	background-position: 2vw center;
+	background-repeat: no-repeat;
+	background-color: $secondaryColor;
+}
+
+.hamburgerOpen {
+	@extend .hamburger;
+	background-image: url(../images/menu.jpg);
+
+}
+
+.hamburgerClose {
+	@extend .hamburger;
+	background-image: url(../images/menu.jpg);
+
+}
+
+nav {
+	height: 100vh;
+	width: 100%;
+	background-color: $menuColor;
+	ul {
+		margin-left: 2%;
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	ul li {
+		float: left;
+	}
+	ul li a {
+		border: none;
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+		background: none;
+		font-size: .9rem;
+		padding: .7rem .9rem;
+		transition: color .3s linear;
+	}
+	ul li a:hover {
+		background: darken($menuColor, 5%);
+	}
+	ul li ul {
+		z-index: 99;
+		position: absolute;
+		background-color: lighten($menuColor, 10%);
+		left: -999em;
+		width: 10em;
+	}
+}

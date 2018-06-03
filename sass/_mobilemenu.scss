@@ -1,0 +1,29 @@
+body {
+	padding-top: 50px;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2.75rem;
+	background-color: $menuColor;
+}
+
+#hamburgerBtn {
+	display: block;
+	width: 7rem;
+	height: 2.75rem;
+	background-image: url(../images/menuOpenBlack.png);
+	background-color: rgba(0, 0, 0, 0.1);
+	background-position: 2vw center;
+	background-repeat: no-repeat;
+	border: 0 none;
+}
+
+#hamburgerBtn.open {
+	background: url(../images/menuCloseBlack.png);
+	background-position: 2vw center;
+	background-repeat: no-repeat;
+}
